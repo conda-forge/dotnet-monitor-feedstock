@@ -1,5 +1,5 @@
 {% set name = "dotnet-monitor" %}
-{% set version = "8.0.3" %}
+{% set version = "9.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dotnet/dotnet-monitor/archive/v{{ version }}.tar.gz
-  sha256: cb23ecf64d0cc13f31ef5dff3cd1469e105400a12d4ebd47c1601291eaa16caf
+  sha256: 057fef4200d58e05e29c6f4ee0859697b891da32413f98300bfb704fc8a97ee8
 
 build:
   noarch: generic
