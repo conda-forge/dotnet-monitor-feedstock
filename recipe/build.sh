@@ -4,6 +4,7 @@ set -o xtrace -o nounset -o pipefail -o errexit
 
 mkdir -p ${PREFIX}/bin
 mkdir -p ${PREFIX}/libexec/${PKG_NAME}
+ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 
 # Build package with dotnet publish
 cp global.json global_old.json
@@ -18,6 +19,7 @@ tee ${PREFIX}/bin/dotnet-monitor << EOF
 #!/bin/sh
 exec \${DOTNET_ROOT}/dotnet exec \${CONDA_PREFIX}/libexec/dotnet-monitor/dotnet-monitor.dll "\$@"
 EOF
+chmod +x ${PREFIX}/bin/dotnet-monitor
 
 tee ${PREFIX}/bin/dotnet-monitor.cmd << EOF
 call %DOTNET_ROOT%\dotnet exec %CONDA_PREFIX%\libexec\dotnet-monitor\dotnet-monitor.dll %*
