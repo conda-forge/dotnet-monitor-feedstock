@@ -27,3 +27,5 @@ EOF
 
 # Download dependency licenses wtih dotnet-project-licenses
 dotnet-project-licenses --input src/Tools/dotnet-monitor/dotnet-monitor.csproj -t -d license-files
+
+rm ${PREFIX}/bin/dotnet
