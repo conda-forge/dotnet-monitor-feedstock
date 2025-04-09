@@ -1,5 +1,5 @@
 context:
-  version: 8.0.3
+  version: "9.0.2"
 
 package:
   name: dotnet-monitor
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/dotnet/dotnet-monitor/archive/v${{ version }}.tar.gz
-  sha256: cb23ecf64d0cc13f31ef5dff3cd1469e105400a12d4ebd47c1601291eaa16caf
+  sha256: a05ff4eb6960afcbc69525f98ee979c47de3e3859cbe252f345a1db3765c1158
 
 build:
-  number: 1
+  number: 0
   noarch: generic
 
 requirements:
